@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bricolage+Grotesque&family=Bungee+Spice&family=Days+One&family=Poppins:wght@400;500;600;700&display=swap');
+html,
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Days One';
+    color: black;
+}
+.bg_img{
+    width: 100%;
+    height: 100%;
+    background: url(img1.jpg);
+    background-size: 100% 100%;
+    filter: blur(5px);
+    z-index: -1;
+}
+.contianer{
+    position: absolute;
+    width: 30%;
+    height:auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px black;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    transition: .5s;
+}
+.contianer .stopWatch{
+    position: relative;
+    width:auto;
+    height: auto;
+    padding: 20px;
+    background: transparent;
+    box-shadow: inset 0px 0px 10px 2px black;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.contianer .stopWatch h1{
+    font-size: 1.5em auto;
+    text-align: center;
+    transition: .5s;
+}
+.contianer .stopWatch .timer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.contianer .stopWatch .timer span, p{
+    font-size: 3em;
+    margin: 5px;
+    overflow: hidden;
+    color: #000000;
+    margin-bottom: 20px;
+    transition: .5s;
+    text-align: center;
+}
+.contianer .stopWatch .timer .milli{
+   width: 40%;
+}
+.contianer .stopWatch .controls button{
+ background: rgb(5, 239, 5);
+ padding: 10px;
+ border: 1px solid rgb(5, 239, 5);
+ color: #000000;
+ font-weight: bold;
+ font-family: Arial;
+ transition: .5s;
+}
+.lap_message{
+    position: absolute;
+    width: 31%;
+    height: 25%;
+    top: 86%;
+    overflow: auto;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+.lap_message p{
+  font-size: 18px;
+  font-weight: none;
+  background: transparent;
+  box-shadow: 0px 0px 5px 1px black;
+  border: 10px;
+  margin:8px ;
+}
+.block{
+    display: none;
+}
+@media (max-width:1100px){
+    .contianer{
+        width: 60%;
+    }
+    .contianer .stopWatch .timer span, p{
+        font-size: 2.7em;
+    }
+    .lap_message{
+       width: 61%;
+    }
+}
+@media (max-width:900px){
+    .contianer{
+        width: 65%;
+    }
+    .contianer .stopWatch .timer span, p{
+        font-size: 2.5em;
+    }
+    .lap_message{
+        width: 66%;
+     }
+}
+@media (max-width:700px){
+    .contianer{
+        width: 85%;
+    }
+    .contianer .stopWatch .timer span, p{
+        font-size: 2.3em;
+    }
+    .lap_message{
+        width: 86%;
+     }
+}
+@media (max-width:500px){
+    .contianer{
+        width: 90%;
+    }
+    .lap_message{
+        width: 91%;
+     }
+    .contianer .stopWatch .timer span, p{
+        font-size: 1.8em;
+    }
+}
+@media (max-width:350px){
+    .contianer{
+        width: 90%;
+    }
+    .lap_message{
+        width: 91%;
+     }
+    .contianer .stopWatch .controls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contianer .stopWatch .timer span, p{
+        font-size: 2em;
+    }
+    .contianer .stopWatch .timer .hide{
+        display: none;
+    }
+    .contianer .stopWatch .controls button{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-60%, 0%);
+        width: 100%;
+       padding: 5px;
+       margin: 10px;
+       }
+
+}
