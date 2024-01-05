@@ -48,10 +48,10 @@ const stopWatch = function () {
   if (millisecond == 100) {
     millisecond = 0;
     second++;
-    if (second == 59) {
+    if (second == 60) {
       second = 0;
       minute++
-      if (minute == 59) {
+      if (minute == 60) {
         minute = 0;
         hour++;
       }
