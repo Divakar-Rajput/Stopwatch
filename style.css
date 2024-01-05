@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bricolage+Grotesque&family=Bungee+Spice&family=Days+One&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 html,
 body{
     padding: 0;
     margin: 0;
     height: 100%;
-    font-family: 'Days One';
+    font-family: 'Open sans', sans-serif;
     color: black;
 }
 .bg_img{
@@ -24,6 +24,7 @@ body{
     box-shadow: 0px 0px 10px 2px black;
     top: 50%;
     left: 50%;
+    border: 3px solid rgb(0, 0, 0);
     background: transparent;
     transform: translate(-50%, -50%);
     z-index: 99;
@@ -34,8 +35,9 @@ body{
     width:auto;
     height: auto;
     padding: 20px;
-    background: transparent;
+    background: linear-gradient(90deg,  rgb(3, 129, 232), blue, blue,  rgb(3, 129, 232));
     box-shadow: inset 0px 0px 10px 2px black;
+    border: 3px solid blue;
     border-radius: 10px;
     top: 50%;
     left: 50%;
@@ -46,10 +48,16 @@ body{
     align-items: center;
     justify-content: center;
 }
-.contianer .stopWatch h1{
+ h1{
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 1.5em auto;
+    padding: 0;
     text-align: center;
     transition: .5s;
+    z-index: 99;
 }
 .contianer .stopWatch .timer{
     position: relative;
@@ -62,6 +70,7 @@ body{
 .contianer .stopWatch .timer span, p{
     font-size: 3em;
     margin: 5px;
+    font-weight: bold;
     overflow: hidden;
     color: #000000;
     margin-bottom: 20px;
@@ -83,9 +92,11 @@ body{
 .lap_message{
     position: absolute;
     width: 31%;
-    height: 25%;
-    top: 86%;
+    max-height: 280px;
+    height: auto;
     overflow: auto;
+    top: 81%;
+    display: none;
     left: 50%;
     margin: 0;
     padding: 0;
@@ -124,6 +135,15 @@ body{
     .lap_message{
         width: 66%;
      }
+     h1{
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .lap_message{
+        max-height: 230px;
+        top: 81%;
+    }
 }
 @media (max-width:700px){
     .contianer{
@@ -135,6 +155,10 @@ body{
     .lap_message{
         width: 86%;
      }
+     .lap_message{
+        max-height: 230px;
+        top: 81%;
+    }
 }
 @media (max-width:500px){
     .contianer{
@@ -146,6 +170,9 @@ body{
     .contianer .stopWatch .timer span, p{
         font-size: 1.8em;
     }
+    h1{
+        font-size: 1.7em;
+    }
 }
 @media (max-width:350px){
     .contianer{
@@ -154,6 +181,13 @@ body{
     .lap_message{
         width: 91%;
      }
+     h1{
+        display: none;
+    }
+    .lap_message{
+        max-height: 198px;
+        top: 84%;
+    }
     .contianer .stopWatch .controls{
         display: flex;
         align-items: center;
@@ -177,3 +211,17 @@ body{
        }
 
 }
+@media (max-width:300px){
+    .lap_message{
+        width: 99%;
+     }
+     h1{
+        display: none;
+    }
+    .lap_message{
+        max-height: 100px;
+        top: 84%;
+    }   
+
+}
+
